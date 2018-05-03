@@ -1,4 +1,7 @@
+import { Updates } from './udaptes.interface';
+import { ChangeLog } from './changelog.interface';
 import { Social } from './social.interface';
+
 export interface Portfolio {
     firstName: string;
     middleName: string;
