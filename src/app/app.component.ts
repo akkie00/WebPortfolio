@@ -1,5 +1,7 @@
+import { Component} from '@angular/core';
+import  { CommonModule} from '@angular/common';
+import { OnInit, NgModule } from '@angular/core';
 import { Portfolio } from './../models/portfolio.interface';
-import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +15,19 @@ export class AppComponent implements OnInit{
       firstName: "Akshay",
       middleName: "Kumar",
       lastName: "Kuchankar",
-      subheading: "DevOps engineer and support",
-      socialMedia: [],
+      subheading: "DevOps Support",
+      socialMedia: [
+        {
+          icon: 'fa fa-linkedin fa-2x',
+          link: 'https://www.linkedin.com/in/akshay-kumar-603740136/',
+          color: '#007bb6'
+        },
+        {
+          icon: 'fa fa-github fa-2x',
+          link: 'https://github.com/akkie00',
+          color: '#6e5494'
+        }
+      ],
       introduction: "Hello there, my name is Akshay kumar and I've started learning web development using HTML, CSS, JavaScript. This is my first Angular Project.",
       changeLog: [],
       updates: [],

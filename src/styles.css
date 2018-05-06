@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.subHeading{
+    font-weight: 250;
+
+}
+
+body{
+    background: rgb(100, 178, 247) !important;
+}
+.smallerImg{
+    width: 20%;
+}

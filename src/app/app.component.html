@@ -1,5 +1,13 @@
 <div class="container">
 <span class="text-center">
-    <h1>{{Portfolio.firstName}}</h1>
+    <h1>{{Portfolio.firstName+' '+Portfolio.middleName+' '+Portfolio.lastName[0]}}</h1>
+    <h2 class="subHeading">{{Portfolio.subheading}}</h2>
+    <img src="../assets/img/me.JPG" class="rounded-circle mx-auto d-block smallerImg">
 </span>
+<div class="row justify-content-center">
+    <a [href]="social.link" class="p-2" target="blank"
+     *ngFor="let social of Portfolio.socialMedia">
+        <i [style.color]="social.color" [class]="social.icon"></i>
+    </a>
 </div>
+</div>  
