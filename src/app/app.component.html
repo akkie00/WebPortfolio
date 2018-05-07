@@ -1,13 +1,24 @@
 <div class="container">
-<span class="text-center">
-    <h1>{{Portfolio.firstName+' '+Portfolio.middleName+' '+Portfolio.lastName[0]}}</h1>
-    <h2 class="subHeading">{{Portfolio.subheading}}</h2>
-    <img src="../assets/img/me.JPG" class="rounded-circle mx-auto d-block smallerImg">
-</span>
-<div class="row justify-content-center">
-    <a [href]="social.link" class="p-2" target="blank"
-     *ngFor="let social of Portfolio.socialMedia">
-        <i [style.color]="social.color" [class]="social.icon"></i>
-    </a>
+    <span class="text-center">
+        <h1>{{Portfolio.firstName+' '+Portfolio.middleName+' '+Portfolio.lastName[0]}}</h1>
+        <h2 class="subHeading">{{Portfolio.subheading}}</h2>
+        <img src="../assets/img/me.JPG" class="rounded-circle mx-auto d-block smallerImg">
+    </span>
+    <span class="text-center">
+        <h5> You can connect to me through: </h5>
+    </span>
+    <div class="row justify-content-center">
+        <a [href]="social.link" class="p-2" target="blank" *ngFor="let social of Portfolio.socialMedia">
+            <i [style.color]="social.color" [class]="social.icon"></i>
+        </a>
+    </div>
+    <div>
+        <h4>
+            <i class="fa fa-plus" (click)="toggleOpen('logOpen')" *ngIf="logOpen; else logExpanded"></i> 
+            <ng-template #logExpanded>
+                <i class="fa fa-minus" (click)="toggleOpen('logOpen')"></i>
+            </ng-template>
+            ChangeLog
+        </h4>
+    </div>
 </div>
-</div>  
