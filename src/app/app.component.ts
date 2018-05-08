@@ -1,5 +1,5 @@
-import { Component} from '@angular/core';
-import  { CommonModule} from '@angular/common';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { OnInit, NgModule } from '@angular/core';
 import { Portfolio } from './../models/portfolio.interface';
 
@@ -8,11 +8,13 @@ import { Portfolio } from './../models/portfolio.interface';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   public Portfolio: Portfolio;
-  public logOpen: boolean = true; 
-  public ngOnInit(): void{
-    this.Portfolio= {
+  public logOpen: boolean = true;
+  public updateOpen: boolean = true;
+  public bioOpen: boolean = true;
+  public ngOnInit(): void {
+    this.Portfolio = {
       firstName: "Akshay",
       middleName: "Kumar",
       lastName: "Kuchankar",
@@ -35,14 +37,14 @@ export class AppComponent implements OnInit{
         },
         {
           icon: 'fa fa-qoura fa-2x',
-          link:  'https://www.quora.com/profile/Akshay-Kumar-693',
+          link: 'https://www.quora.com/profile/Akshay-Kumar-693',
           color: '#D01010'
         }
       ],
       introduction: "Hello there, my name is Akshay kumar and I've started learning web development using HTML, CSS, JavaScript. This is my first Angular Project.",
       changeLog: [
         {
-          color: '#171616',
+          color: '#77d360',
           month: 'April',
           year: 2018,
           highlight: 'Completed Udacity Free Scholorship course for Front-end Web Development',
@@ -51,14 +53,14 @@ export class AppComponent implements OnInit{
           a small project.`
         },
         {
-          color: '#171616',
+          color: '#d69a39',
           month: 'February',
           year: 2018,
           highlight: 'Created git hub profile',
           details: 'Started working on Git and pushing changes to it more frequently since then'
         },
         {
-          color: '#504848',
+          color: '#f0553a',
           month: 'August',
           year: 2017,
           highlight: 'Started working on my DevOps project in my company.',
@@ -69,7 +71,7 @@ export class AppComponent implements OnInit{
           smooth.`
         }
       ],
-      updates: [
+      Updates: [
         {
           description: 'Medium',
           link: 'https://medium.com/@akshaykumar_92451/has-recommended'
@@ -92,10 +94,17 @@ export class AppComponent implements OnInit{
       change at the end of the year.`
     }
   }
-  public toggleOpen(valueToToggle: string): void{
-    switch(valueToToggle){
+  public toggleOpen(valueToToggle: string): void {
+    switch (valueToToggle) {
       case 'logOpen':
         this.logOpen = !this.logOpen;
+        break;
+      case 'updateOpen':
+        this.updateOpen = !this.updateOpen;
+        break;
+      case 'bioOpen':
+        this.bioOpen = !this.bioOpen;
+        break;
     }
   }
 }
