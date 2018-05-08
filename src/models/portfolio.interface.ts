@@ -9,7 +9,7 @@ export interface Portfolio {
     subheading: string;
     socialMedia: Social[];
     speakerBio: string;
-    updates: Updates[];
+    Updates: Updates[];
     introduction: string;
     changeLog: ChangeLog[];
 
