@@ -1,12 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 .subHeading{
     font-weight: 250;
-
 }
-
 body{
-    background: rgb(100, 178, 247) !important;
+    background: #ece9e8 !important;
 }
 .smallerImg{
     width: 20%;
+}
+i:hover{
+    color: rgb(96, 230, 212) !important;
+}
+.changeLogDetails{
+    color: rgb(15, 15, 15);
+    font-size: 200;
+}
+
+.updates{
+    color: rgb(199, 93, 134);
+    text-decoration: none;
+}
+.updates :hover{
+    color: rgb(199, 93, 134);
+    text-decoration: none;
+
+}
+
+.speakerBio{
+    background: rgba(228, 145, 145, 0.467);
+    line-height: 1.8em;
 }
