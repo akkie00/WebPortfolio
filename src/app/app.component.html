@@ -21,13 +21,13 @@
             ChangeLog
         </h4>
         <p class="description">I've been studying Web Development and here are somethings which I went to do in the progress</p>
-        <div *ngIf="!logOpen">
+        <div *ngIf="!logOpen" [@fadeInOut]>
             <ul>
                 <li *ngFor="let change of Portfolio.changeLog" [ngStyle]="{'color': change.color}" (mouseenter)="change.showDetails= true;"
                     (mouseleave)="change.showDetails= false;">
                     <div>{{change.month +' - '+change.year}}</div>
                     <div>{{change.highlight}}</div>
-                    <div *ngIf="change.showDetails" class="changeLogDetails">{{change.details}}</div>
+                    <div *ngIf="change.showDetails" [@fadeInOut] class="changeLogDetails">{{change.details}}</div>
                 </li>
             </ul>
         </div>
@@ -39,7 +39,8 @@
                 </ng-template>
                 Updates
             </h4>
-            <div *ngIf='!updateOpen'>
+            <p>Just a little more something on things going on in my life</p>
+            <div *ngIf='!updateOpen' [@fadeInOut]>
                 <ul>
                     <li class="liUpdates pt-3" *ngFor="let desc of Portfolio.Updates">
                         <a [href]="desc.link" class="updates" target="_blank">{{desc.description}}</a>
@@ -49,13 +50,13 @@
         </div>
         <div>
             <h4>
-                <i class="fa fa-plus" *ngIf="bioOpen; else bioExpanded" (click)="toggleOpen('bioOpen')" ></i>
+                <i class="fa fa-plus" *ngIf="bioOpen; else bioExpanded" (click)="toggleOpen('bioOpen')"></i>
                 <ng-template #bioExpanded>
                     <i class="fa fa-minus" (click)="toggleOpen('bioOpen')"></i>
                 </ng-template>
                 Speaker Bio
             </h4>
-            <div *ngIf="!bioOpen" class="p-4 mb-5 speakerBio">
+            <div *ngIf="!bioOpen" [@fadeInOut] class="p-4 mb-5 speakerBio">
                 {{Portfolio.speakerBio}}
             </div>
         </div>

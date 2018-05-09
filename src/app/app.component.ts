@@ -1,12 +1,23 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { OnInit, NgModule } from '@angular/core';
+import { OnInit, NgModule, style, state, trigger, animate, transition } from '@angular/core';
 import { Portfolio } from './../models/portfolio.interface';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations: [
+    trigger('fadeInOut',[
+      transition("void => *", [
+        style({opacity: 0}), 
+        animate(500, style({opacity: 1}))     
+      ]),
+      transition("* => void",[
+        animate(500, style({opacity: 0}))
+      ])
+    ])
+  ]
 })
 export class AppComponent implements OnInit {
   public Portfolio: Portfolio;
