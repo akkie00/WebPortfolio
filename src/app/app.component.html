@@ -1,7 +1,7 @@
 <div class="container">
     <span class="text-center">
-        <h1>{{Portfolio.firstName+' '+Portfolio.middleName+' '+Portfolio.lastName[0]}}</h1>
-        <h2 class="subHeading">{{Portfolio.subheading}}</h2>
+        <h1 [innerText]="Portfolio.firstName+' '+Portfolio.middleName+' '+Portfolio.lastName[0]"></h1>
+        <h2 class="subHeading" [innerText]="Portfolio.subheading"></h2>
         <img src="../assets/img/me.JPG" class="rounded-circle mx-auto d-block smallerImg">
     </span>
     <span class="text-center">
@@ -23,11 +23,11 @@
         <p class="description">I've been studying Web Development and here are somethings which I went to do in the progress</p>
         <div *ngIf="!logOpen" [@fadeInOut]>
             <ul>
-                <li *ngFor="let change of Portfolio.changeLog" [ngStyle]="{'color': change.color}" (mouseenter)="change.showDetails= true;"
+                <li *ngFor="let change of Portfolio.changeLog" [style.color]="change.color"  (mouseenter)="change.showDetails= true;"
                     (mouseleave)="change.showDetails= false;">
-                    <div>{{change.month +' - '+change.year}}</div>
-                    <div>{{change.highlight}}</div>
-                    <div *ngIf="change.showDetails" [@fadeInOut] class="changeLogDetails">{{change.details}}</div>
+                    <div [innerText]="change.month +' - '+change.year"></div>
+                    <div [innerText]="change.highlight"></div>
+                    <div *ngIf="change.showDetails" [@fadeInOut] class="changeLogDetails" [innerText]="change.details"></div>
                 </li>
             </ul>
         </div>
@@ -43,7 +43,7 @@
             <div *ngIf='!updateOpen' [@fadeInOut]>
                 <ul>
                     <li class="liUpdates pt-3" *ngFor="let desc of Portfolio.Updates">
-                        <a [href]="desc.link" class="updates" target="_blank">{{desc.description}}</a>
+                        <a [href]="desc.link" class="updates" target="_blank" [innerText]="desc.description"></a>
                     </li>
                 </ul>
             </div>
@@ -56,9 +56,7 @@
                 </ng-template>
                 Speaker Bio
             </h4>
-            <div *ngIf="!bioOpen" [@fadeInOut] class="p-4 mb-5 speakerBio">
-                {{Portfolio.speakerBio}}
-            </div>
+            <div *ngIf="!bioOpen" [@fadeInOut] class="p-4 mb-5 speakerBio" [innerText]="Portfolio.speakerBio"></div>
         </div>
     </div>
 </div>

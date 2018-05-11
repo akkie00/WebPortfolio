@@ -1,6 +1,5 @@
-import { Updates } from './udaptes.interface';
-import { ChangeLog } from './changelog.interface';
-import { Social } from './social.interface';
+import { Updates, ChangeLog, Social } from './';
+
 
 export interface Portfolio {
     firstName: string;
