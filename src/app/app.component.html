@@ -23,8 +23,7 @@
         <p class="description">I've been studying Web Development and here are somethings which I went to do in the progress</p>
         <div *ngIf="!logOpen" [@fadeInOut]>
             <ul>
-                <li *ngFor="let change of Portfolio.changeLog" [style.color]="change.color"  (mouseenter)="change.showDetails= true;"
-                    (mouseleave)="change.showDetails= false;">
+                <li *ngFor="let change of Portfolio.changeLog" [style.color]="change.color" (mouseenter)="change.showDetails= true;" (mouseleave)="change.showDetails= false;">
                     <div [innerText]="change.month +' - '+change.year"></div>
                     <div [innerText]="change.highlight"></div>
                     <div *ngIf="change.showDetails" [@fadeInOut] class="changeLogDetails" [innerText]="change.details"></div>
@@ -42,9 +41,7 @@
             <p>Just a little more something on things going on in my life</p>
             <div *ngIf='!updateOpen' [@fadeInOut]>
                 <ul>
-                    <li class="liUpdates pt-3" *ngFor="let desc of Portfolio.Updates">
-                        <a [href]="desc.link" class="updates" target="_blank" [innerText]="desc.description"></a>
-                    </li>
+                    <portfolio-update *ngFor="let desc of Portfolio.Updates" [update]="desc"></portfolio-update>
                 </ul>
             </div>
         </div>
