@@ -1,13 +1,12 @@
 <li [style.color]="changeData.color">
     <div [innerText]="changeData.month +' - '+changeData.year"></div>
-    <i class="fa fa-info-circle"
-    (click)="changer('changeOpen')" 
+    <i class="fa fa-info-circle" (click)="changer('changeOpen')" 
     *ngIf="changeOpen; else changeClosed"></i>
     <ng-template #changeClosed>
-        <i class="fa fa-info-circle" (click)="changer('changeOpen')" ></i>
+        <i class="fa fa-info-circle" (click)="changer('changeOpen')"></i>
     </ng-template>
     <span [innerText]="changeData.highlight"></span>
-    <div  *ngIf="!changeOpen" >
+    <div *ngIf="!changeOpen">
         <span class="changeLogDetails" [innerText]="changeData.details"></span>
     </div>
 </li>

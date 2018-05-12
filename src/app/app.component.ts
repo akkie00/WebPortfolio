@@ -24,7 +24,6 @@ export class AppComponent implements OnInit {
   public logOpen: boolean = true;
   public updateOpen: boolean = true;
   public bioOpen: boolean = true;
-  // public changeOpen: boolean = true;
   public ngOnInit(): void {
     this.Portfolio = PortfolioData;
       
@@ -40,9 +39,6 @@ export class AppComponent implements OnInit {
       case 'bioOpen':
         this.bioOpen = !this.bioOpen;
         break;
-      // case 'changeOpen':
-      //   this.changeOpen = !this.changeOpen;
-      //   break;
     }
   }
 }
