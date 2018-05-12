@@ -30,3 +30,7 @@ i:hover{
     background: rgba(145, 139, 139, 0.705);
     line-height: 1.8em;
 }
+
+.iconStyle{
+    color: black;
+}

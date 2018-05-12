@@ -4,4 +4,4 @@ export interface ChangeLog{
     year: number;
     highlight: string;
     details: string;
-}
+}  

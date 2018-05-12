@@ -33,23 +33,23 @@ export const PortfolioData: Portfolio = {
             color: '#77d360',
             month: 'April',
             year: 2018,
-            highlight: 'Completed Udacity Free Scholorship course for Front-end Web Development',
+            highlight: ' Completed Udacity Free Scholorship course for Front-end Web Development',
             details: `Completed the course from Udacity which started on February, 2018. It was 
-        a good starter course for beginners with things like HTML, CSS, JavaScript, JQuery and
+        a good starter course for beginners with introduction to HTML, CSS, JavaScript, JQuery and
         a small project.`
         },
         {
             color: '#d69a39',
             month: 'February',
             year: 2018,
-            highlight: 'Created git hub profile',
+            highlight: ' Created git hub profile',
             details: 'Started working on Git and pushing changes to it more frequently since then'
         },
         {
             color: '#f0553a',
             month: 'August',
             year: 2017,
-            highlight: 'Started working on my DevOps project in my company.',
+            highlight: ' Started working on my DevOps project in my company.',
             details: `The project which I work on is basically is a support project,
         in which we have to setup environment and provide it to the developers.
         It deals with problems that developers and testers face while they're working. 
@@ -59,15 +59,18 @@ export const PortfolioData: Portfolio = {
     ],
     Updates: [
         {
-            description: 'Medium',
+            icon: 'fa fa-file-text',
+            description: ' Medium',
             link: 'https://medium.com/@akshaykumar_92451/has-recommended'
         },
         {
-            description: 'Quora Answers',
+            icon: 'fa fa-file-text',
+            description: ' Quora Answers',
             link: 'https://www.quora.com/profile/Akshay-Kumar-693'
         },
         {
-            description: 'Udacity\'s PixelArtMaker Project',
+            icon: 'fa fa-file-code-o',
+            description: '  Udacity\'s PixelArtMaker Project',
             link: 'https://github.com/akkie00/UdacityProjects/tree/master/PixelArt'
         }
     ],

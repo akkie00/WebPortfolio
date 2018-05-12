@@ -14,7 +14,8 @@
     </div>
     <div>
         <h4>
-            <i class="fa fa-plus" (click)="toggleOpen('logOpen')" *ngIf="logOpen; else logExpanded"></i>
+            <i class="fa fa-plus" (click)="toggleOpen('logOpen')"
+            *ngIf="logOpen; else logExpanded"></i>
             <ng-template #logExpanded>
                 <i class="fa fa-minus" (click)="toggleOpen('logOpen')"></i>
             </ng-template>
@@ -23,18 +24,10 @@
         <p class="description">I've been studying Web Development and here are somethings which I went to do in the progress</p>
         <div *ngIf="!logOpen" [@fadeInOut]>
             <ul>
-                <portfolio-change *ngFor="let change of Portfolio.changeLog" [changeData]="change">
+                <portfolio-change *ngFor="let change of Portfolio.changeLog" 
+                [changeData]="change">
 
                 </portfolio-change>
-                <!-- <li *ngFor="let change of Portfolio.changeLog"
-                [style.color]="change.color" 
-                (mouseenter)="change.showDetails= true;" 
-                (mouseleave)="change.showDetails= false;">
-                    <div [innerText]="change.month +' - '+change.year"></div>
-                    <div [innerText]="change.highlight"></div>
-                    <div *ngIf="change.showDetails" [@fadeInOut] class="changeLogDetails" 
-                    [innerText]="change.details"></div>
-                </li> -->
             </ul>
         </div>
         <div>

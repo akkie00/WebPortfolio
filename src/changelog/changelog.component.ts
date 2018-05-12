@@ -8,4 +8,14 @@ import { ChangeLog } from './../models/';
 
 export class PortfolioChangeComponent {
     @Input() public changeData: ChangeLog;
+
+    public changeOpen: boolean = true;
+    public changer(valueToToggle: string): void{
+        switch (valueToToggle) {
+            case 'changeOpen':
+                this.changeOpen = !this.changeOpen;
+                break;
+        }
+    }
+    
 }
